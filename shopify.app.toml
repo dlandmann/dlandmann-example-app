@@ -1,0 +1,28 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "dlandmann-example-app"
+client_id = "e64fc6e097073fd1eff5ff463ee415b4"
+application_url = "https://cover-neighbors-remainder-beth.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://cover-neighbors-remainder-beth.trycloudflare.com/auth/callback",
+  "https://cover-neighbors-remainder-beth.trycloudflare.com/auth/shopify/callback",
+  "https://cover-neighbors-remainder-beth.trycloudflare.com/api/auth/callback",
+  "https://cover-neighbors-remainder-beth.trycloudflare.com/.shopify/graphiql/auth/callback"
+]
+
+[webhooks]
+api_version = "2023-10"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "dev-sp-iff-03.myshopify.com"

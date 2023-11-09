@@ -1,0 +1,28 @@
+query RunInput {
+  deliveryCustomization {
+    metafield(namespace: "$app:delivery-warenpost", key: "function-configuration") {
+      value
+    }
+  }
+  cart {
+    deliveryGroups {
+      deliveryOptions {
+        handle
+        title
+      }
+    }
+    lines {
+      quantity
+      merchandise {
+        __typename
+        ...on ProductVariant {
+          product {
+            type: metafield(namespace: "custom", key: "type") {
+              value
+            }
+          }
+        }
+      }
+    }
+  }
+}
